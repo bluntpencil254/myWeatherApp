@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("./images/bg3.jpg");
+  background-size: cover;
+}
+
+.card {
+  width: 500px;
+  padding: 40px;
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  background: rgba(255,255,255,0.15);
+  color: white;
+}
+
+input {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: none;
+  margin-top: 20px;
+}
+
+button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: none;
+  background: #2d8cff;
+  color: white;
+  cursor: pointer;
+}
+
+.error {
+  margin-top: 20px;
+  color: #ff4d4d;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.weather {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.weather h1 {
+  font-size: 80px;
+}
+
+.weather h2 {
+  font-size: 36px;
+  margin-top: 10px;
+}
+
+.weather h3 {
+  font-size: 32px;
+  margin-top: 10px;
+}
+
+.weather p {
+  font-size: 24px;
+  margin-top: 10px;
+}
