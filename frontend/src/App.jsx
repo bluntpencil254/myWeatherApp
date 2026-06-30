@@ -16,7 +16,7 @@ function App() {
     }
 
     const res = await fetch(
-      `http://127.0.0.1:5000/weather/${city}`
+      `https://myweatherapp-a5k5.onrender.com/weather/${city}`
     );
 
     const data = await res.json();
