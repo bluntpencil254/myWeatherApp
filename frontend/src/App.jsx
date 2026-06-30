@@ -5,8 +5,10 @@ function App() {
   const [city, setCity] = useState("");
   const [weather, setWeather] = useState(null);
   const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
 
   async function getWeather() {
+    setLoading(true);
     setError("");
     setWeather(null);
 
@@ -16,11 +18,10 @@ function App() {
     }
 
     const res = await fetch(
-      `http://127.0.0.1:5000/weather/${city}`
+      `https://myweatherapp-a5k5.onrender.com/weather/${city}`
     );
 
     const data = await res.json();
-    console.log(data);
 
     if (!res.ok) {
       setError(data.error || "Something went wrong");
@@ -28,6 +29,7 @@ function App() {
     }
 
     setWeather(data);
+    setLoading(false);
 }
 
   return (
@@ -44,6 +46,7 @@ function App() {
 
         <button onClick={getWeather}>Get Weather</button>
         {error && <p className="error">{error}</p>}
+        {loading && <p>Loading weather...</p>}
 
 
         {weather && (
